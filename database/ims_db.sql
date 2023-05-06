@@ -33,15 +33,15 @@ CREATE TABLE `ims_brand` (
 --
 
 INSERT INTO `ims_brand` (`id`, `categoryid`, `bname`, `status`) VALUES
-(1, 2, 'Brand 1', 'active'),
-(2, 2, 'Brand 2', 'active'),
-(3, 2, 'Brand 3', 'active'),
-(4, 1, 'Brand 201', 'active'),
-(5, 1, 'Brand 202', 'active'),
-(6, 1, 'Brand 203', 'active'),
-(7, 3, 'Brand 301', 'active'),
-(8, 3, 'Brand 302', 'active'),
-(9, 3, 'Brand 303', 'active');
+(1, 2, 'Samsung', 'active'),
+(2, 2, 'LG', 'active'),
+(3, 2, 'Carrier', 'active'),
+(4, 1, 'Daikin', 'active'),
+(5, 1, 'Haier', 'active'),
+(6, 1, 'Panasonic', 'active'),
+(7, 3, 'Hisense', 'active'),
+(8, 3, 'Whrilpool', 'active'),
+(9, 3, 'Fujidenzo', 'active');
 
 -- --------------------------------------------------------
 
@@ -60,9 +60,9 @@ CREATE TABLE `ims_category` (
 --
 
 INSERT INTO `ims_category` (`categoryid`, `name`, `status`) VALUES
-(1, 'Smartphone', 'active'),
-(2, 'Random Item', 'active'),
-(3, 'Speaker', 'active');
+(1, 'Air Conditioner', 'active'),
+(2, 'Refrigerator', 'active'),
+(3, 'Random Item', 'active');
 
 -- --------------------------------------------------------
 
@@ -74,7 +74,7 @@ CREATE TABLE `ims_customer` (
   `id` int(11) NOT NULL,
   `name` varchar(200) NOT NULL,
   `address` text NOT NULL,
-  `mobile` int(50) NOT NULL,
+  `mobile` varchar(50) NOT NULL,
   `balance` double(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -83,8 +83,8 @@ CREATE TABLE `ims_customer` (
 --
 
 INSERT INTO `ims_customer` (`id`, `name`, `address`, `mobile`, `balance`) VALUES
-(1, 'Mark Cooper', 'Sample Address', 2147483647, 25000.00),
-(2, 'George Wilson', '2306 St, Here There', 2147483647, 35000.00);
+(1, 'Aleisha Lizarondo', 'Hagonoy Bulacan', '09779182091', 25000.00),
+(2, 'Alyssa Torres', 'Guiguinto Bulacan', '09199283283', 35000.00);
 
 -- --------------------------------------------------------
 
@@ -122,7 +122,6 @@ CREATE TABLE `ims_product` (
   `model` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `quantity` int(11) NOT NULL,
-  `unit` varchar(150) NOT NULL,
   `base_price` double(10,2) NOT NULL,
   `tax` decimal(4,2) NOT NULL,
   `minimum_order` double(10,2) NOT NULL,
@@ -135,10 +134,10 @@ CREATE TABLE `ims_product` (
 -- Dumping data for table `ims_product`
 --
 
-INSERT INTO `ims_product` (`pid`, `categoryid`, `brandid`, `pname`, `model`, `description`, `quantity`, `unit`, `base_price`, `tax`, `minimum_order`, `supplier`, `status`, `date`) VALUES
-(1, 2, 1, 'Product 101', 'P-1001', 'usce auctor faucibus efficitur.', 10, 'Bottles', 500.00, '12.00', 1.00, 1, 'active', '0000-00-00'),
-(2, 1, 4, 'Product 102', 'P-1002', 'Proin vehicula mi pulvinar ipsum ornare tincidunt.', 15, 'Box', 7500.00, '12.00', 1.00, 2, 'active', '0000-00-00'),
-(3, 3, 7, 'Product 103', 'P-1003', 'Integer interdum, odio eget mattis venenatis', 20, 'Bags', 350.00, '12.00', 1.00, 3, 'active', '0000-00-00');
+INSERT INTO `ims_product` (`pid`, `categoryid`, `brandid`, `pname`, `model`, `description`, `quantity`, `base_price`, `tax`, `minimum_order`, `supplier`, `status`, `date`) VALUES
+(1, 2, 1, 'Product 101', 'P-1001', 'usce auctor faucibus efficitur.', 10, 500.00, '12.00', 1.00, 1, 'active', '0000-00-00'),
+(2, 1, 4, 'Product 102', 'P-1002', 'Proin vehicula mi pulvinar ipsum ornare tincidunt.', 15, 7500.00, '12.00', 1.00, 2, 'active', '0000-00-00'),
+(3, 3, 7, 'Product 103', 'P-1003', 'Integer interdum, odio eget mattis venenatis', 20, 350.00, '12.00', 1.00, 3, 'active', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -182,9 +181,9 @@ CREATE TABLE `ims_supplier` (
 --
 
 INSERT INTO `ims_supplier` (`supplier_id`, `supplier_name`, `mobile`, `address`, `status`) VALUES
-(1, 'Supplier 101', '09645987123', 'Over Here', 'active'),
-(2, 'Supplier 102', '094568791252', 'Over There', 'active'),
-(3, 'Supplier 103', '09789897879', 'Anywhere There', 'active');
+(1, 'Supplier 1', '09645987123', 'Over Here', 'active'),
+(2, 'Supplier 2', '094568791252', 'Over There', 'active'),
+(3, 'Supplier 3', '09789897879', 'Anywhere There', 'active');
 
 -- --------------------------------------------------------
 

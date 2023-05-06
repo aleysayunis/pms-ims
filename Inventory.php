@@ -355,8 +355,8 @@ class Inventory {
 	}
 	public function addProduct() {		
 		$sqlInsert = "
-			INSERT INTO ".$this->productTable."(categoryid, brandid, pname, model, description, quantity, unit, base_price, tax, minimum_order, supplier) 
-			VALUES ('".$_POST["categoryid"]."', '".$_POST['brandid']."', '".$_POST['pname']."', '".$_POST['pmodel']."', '".$_POST['description']."', '".$_POST['quantity']."', '".$_POST['unit']."', '".$_POST['base_price']."', '".$_POST['tax']."', 1, '".$_POST['supplierid']."')";		
+			INSERT INTO ".$this->productTable."(categoryid, brandid, pname, model, description, quantity, base_price, tax, minimum_order, supplier) 
+			VALUES ('".$_POST["categoryid"]."', '".$_POST['brandid']."', '".$_POST['pname']."', '".$_POST['pmodel']."', '".$_POST['description']."', '".$_POST['quantity']."', '".$_POST['base_price']."', '".$_POST['tax']."', 1, '".$_POST['supplierid']."')";		
 		mysqli_query($this->dbConnect, $sqlInsert);
 		echo 'New Product Added';
 	}	
@@ -374,7 +374,6 @@ class Inventory {
 			$output['model'] = $product['model'];
 			$output['description'] = $product['description'];
 			$output['quantity'] = $product['quantity'];
-			$output['unit'] = $product['unit'];
 			$output['base_price'] = $product['base_price'];
 			$output['tax'] = $product['tax'];
 			$output['supplier'] = $product['supplier'];
@@ -384,7 +383,7 @@ class Inventory {
 	public function updateProduct() {		
 		if($_POST['pid']) {	
 			$sqlUpdate = "UPDATE ".$this->productTable." 
-				SET categoryid = '".$_POST['categoryid']."', brandid='".$_POST['brandid']."', pname='".$_POST['pname']."', model='".$_POST['pmodel']."', description='".$_POST['description']."', quantity='".$_POST['quantity']."', unit='".$_POST['unit']."', base_price='".$_POST['base_price']."', tax='".$_POST['tax']."', supplier='".$_POST['supplierid']."' WHERE pid = '".$_POST["pid"]."'";			
+				SET categoryid = '".$_POST['categoryid']."', brandid='".$_POST['brandid']."', pname='".$_POST['pname']."', model='".$_POST['pmodel']."', description='".$_POST['description']."', quantity='".$_POST['quantity']."', base_price='".$_POST['base_price']."', tax='".$_POST['tax']."', supplier='".$_POST['supplierid']."' WHERE pid = '".$_POST["pid"]."'";			
 			mysqli_query($this->dbConnect, $sqlUpdate);	
 			echo 'Product Update';
 		}	
@@ -434,7 +433,7 @@ class Inventory {
 			</tr>			
 			<tr>
 				<td>Available Quantity</td>
-				<td>'.$product["quantity"].' '.$product["unit"].'</td>
+				<td>'.$product["quantity"].'</td>
 			</tr>
 			<tr>
 				<td>Base Price</td>
