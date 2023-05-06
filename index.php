@@ -11,38 +11,23 @@ $inventory->checkLogin();
 <link rel="stylesheet" href="css/dataTables.bootstrap.min.css" />
 <script src="js/common.js"></script>
 <?php include('inc/container.php');?>
-<div class="container">		
-	<?php include("menus.php"); ?>   
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="card card-default rounded-0 shadow">
-				<div class="card-header">
-					<div class="row">
-						<div class="col-lg-10 col-md-10 col-sm-8 col-xs-6">
-							<h3 class="card-title">Inventory</h3>
-						</div>						
-					</div>
-				</div>
-				<div class="card-body">
-					<div class="row"><div class="col-sm-12 table-responsive">
-						<table id="inventoryDetails" class="table table-bordered table-striped">
-							<thead><tr>
-								<th>#</th>      
-								<th>Product/Code</th>      
-								<th>Starting Inventory</th> 
-								<th>Inventory Recieved</th> 									
-								<th>Inventory Shipped</th>
-								<th>Inventory on Hand</th>								
-							</tr></thead>
-						</table>
-					</div></div>
-				</div>
+<main>
+	<div class="container-fluid px-4">
+		<h1 class="mt-4">Dashboard</h1>
+		<!-- <ol class="breadcrumb mb-4"> -->
+			<!-- <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li> -->
+			<!-- <li class="breadcrumb-item active">Sidenav Light</li> -->
+		<!-- </ol> -->
+		<div class="card mb-4">
+			<div class="card-body">
+				Hello, <?php echo $_SESSION['name']; ?>
 			</div>
 		</div>
 	</div>
-		
-</div>	
+</main>
 <?php include('inc/footer.php');?>
+</div>
+</div>	
 
 
 
