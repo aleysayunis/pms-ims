@@ -206,7 +206,7 @@ CREATE TABLE `ims_user` (
 --
 
 INSERT INTO `ims_user` (`userid`, `email`, `password`, `name`, `type`, `status`) VALUES
-(1, 'admin@mail.com', '0192023a7bbd73250516f069df18b500', 'Administrator', 'admin', 'Active');
+(1, 'admin@pms.com', '0192023a7bbd73250516f069df18b500', 'Administrator', 'admin', 'Active');
 
 --
 -- Indexes for dumped tables
