@@ -112,7 +112,7 @@ if(!empty($_POST['btn_action']) && $_POST['btn_action'] == 'updatePurchase'){
 if(!empty($_POST['btn_action']) && $_POST['btn_action'] == 'deletePurchase'){
 	$inventory->deletePurchase();
 }
-// manage purchase
+// manage order
 if(!empty($_POST['action']) && $_POST['action'] == 'listOrder') {
 	$inventory->listOrders();
 }
