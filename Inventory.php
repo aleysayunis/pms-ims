@@ -67,11 +67,11 @@ class Inventory {
 	public function getCustomerList(){		
 		$sqlQuery = "SELECT * FROM ".$this->customerTable." ";
 		if(!empty($_POST["search"]["value"])){
-			$sqlQuery .= '(id LIKE "%'.$_POST["search"]["value"].'%" ';
-			$sqlQuery .= '(name LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'WHERE id LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'OR name LIKE "%'.$_POST["search"]["value"].'%" ';
 			$sqlQuery .= 'OR address LIKE "%'.$_POST["search"]["value"].'%" ';
-			$sqlQuery .= 'OR mobile LIKE "%'.$_POST["search"]["value"].'%") ';
-			$sqlQuery .= 'OR balance LIKE "%'.$_POST["search"]["value"].'%") ';
+			$sqlQuery .= 'OR mobile LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'OR balance LIKE "%'.$_POST["search"]["value"].'%" ';
 		}
 		if(!empty($_POST["order"])){
 			$sqlQuery .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
@@ -463,8 +463,9 @@ class Inventory {
 	public function getSupplierList(){		
 		$sqlQuery = "SELECT * FROM ".$this->supplierTable." ";
 		if(!empty($_POST["search"]["value"])){
-			$sqlQuery .= 'WHERE (supplier_name LIKE "%'.$_POST["search"]["value"].'%" ';
-			$sqlQuery .= '(address LIKE "%'.$_POST["search"]["value"].'%" ';			
+			$sqlQuery .= 'WHERE supplier_name LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'OR mobile LIKE "%'.$_POST["search"]["value"].'%" ';	
+			$sqlQuery .= 'OR address LIKE "%'.$_POST["search"]["value"].'%" ';			
 		}
 		if(!empty($_POST["order"])){
 			$sqlQuery .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
@@ -536,6 +537,12 @@ class Inventory {
 		$sqlQuery = "SELECT ph.*, p.pname, s.supplier_name FROM ".$this->purchaseTable." as ph
 			INNER JOIN ".$this->productTable." as p ON p.pid = ph.product_id 
 			INNER JOIN ".$this->supplierTable." as s ON s.supplier_id = ph.supplier_id ";
+		if(!empty($_POST["search"]["value"])){
+			$sqlQuery .= 'WHERE ph.purchase_id LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'OR ph.quantity LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'OR p.pname LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'OR s.supplier_name LIKE "%'.$_POST["search"]["value"].'%" ';
+		}
 		if(isset($_POST['order'])) {
 			$sqlQuery .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
 		} else {
@@ -609,6 +616,12 @@ class Inventory {
 		$sqlQuery = "SELECT * FROM ".$this->orderTable." as o
 			INNER JOIN ".$this->customerTable." as c ON c.id = o.customer_id
 			INNER JOIN ".$this->productTable." as p ON p.pid = o.product_id ";		
+		if(!empty($_POST["search"]["value"])){
+			$sqlQuery .= 'WHERE o.order_id LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'OR p.pname LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'OR o.total_shipped LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'OR c.name LIKE "%'.$_POST["search"]["value"].'%" ';
+		}
 		if(isset($_POST['order'])) {
 			$sqlQuery .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
 		} else {
@@ -681,7 +694,15 @@ class Inventory {
 		$sqlQuery = "SELECT p.pid, p.pname, p.model, p.quantity as product_quantity, s.quantity as recieved_quantity, r.total_shipped
 			FROM ".$this->productTable." as p
 			LEFT JOIN ".$this->purchaseTable." as s ON s.product_id = p.pid
-			LEFT JOIN ".$this->orderTable." as r ON r.product_id = p.pid ";		
+			LEFT JOIN ".$this->orderTable." as r ON r.product_id = p.pid ";	
+		if(!empty($_POST["search"]["value"])){
+			$sqlQuery .= 'WHERE p.pid LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'OR p.pname LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'OR p.model LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'OR p.quantity LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'OR s.quantity LIKE "%'.$_POST["search"]["value"].'%" ';
+			$sqlQuery .= 'OR r.total_shipped LIKE "%'.$_POST["search"]["value"].'%" ';
+		}	
 		if(isset($_POST['order'])) {
 			$sqlQuery .= 'ORDER BY '.$_POST['order']['0']['column'].' '.$_POST['order']['0']['dir'].' ';
 		} else {
