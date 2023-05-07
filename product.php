@@ -15,14 +15,14 @@ $inventory->checkLogin();
 <?php include('inc/container.php');?>
 <main>
 	<div class="container-fluid px-4">
-		<h1 class="mt-4">Products</h1>
+		<h1 class="mt-4">Product</h1>
 		<div class="d-flex justify-content-between">
 			<ol class="breadcrumb mb-4">
 				<li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
 				<li class="breadcrumb-item active">Products</li>
 			</ol>
 			<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" align="right">
-                <button type="button" name="add" id="addProduct" class="btn btn-primary bg-gradient rounded-0 btn-sm"><i class="far fa-plus-square"></i> Add Product</button>
+                <button type="button" name="add" id="addProduct" class="btn btn-primary bg-success rounded-0 btn-sm"><i class="far fa-plus-square"></i> Add Product</button>
 			</div>
 		</div>
 		<div class="card mb-4">
@@ -114,7 +114,7 @@ $inventory->checkLogin();
                 </div>
                 <div class="modal-footer">
                     <input type="submit" name="action" id="action" class="btn btn-primary rounded-0 btn-sm" value="Add" form="productForm"/>
-                    <button type="button" class="btn btn-default border rounded-0 btn-sm" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-danger btn-sm rounded-0" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
     </div>

@@ -22,7 +22,7 @@ $inventory->checkLogin();
 				<li class="breadcrumb-item active">Customer</li>
 			</ol>
 			<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" align="right">
-				<button type="button" name="add" id="addCustomer" data-bs-toggle="modal" data-bs-target="#userModal" class="btn btn-primary bg-gradient btn-sm rounded-0"><i class="far fa-plus-square"></i> New Customer</button>
+				<button type="button" name="add" id="addCustomer" data-bs-toggle="modal" data-bs-target="#userModal" class="btn btn-primary bg-success btn-sm rounded-0"><i class="far fa-plus-square"></i> New Customer</button>
 			</div>
 		</div>
 		<div class="card mb-4">
@@ -83,7 +83,7 @@ $inventory->checkLogin();
 				</div>
 				<div class="modal-footer">
 					<button type="submit" name="action" id="action" class="btn btn-sm rounded-0 btn-primary" form="customerForm" >Save</button>
-					<button type="button" class="btn btn-sm rounded-0 btn-default border" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="bbtn btn-danger btn-sm rounded-0" data-bs-dismiss="modal">Close</button>
 				</div>
 			</div>
 	</div>

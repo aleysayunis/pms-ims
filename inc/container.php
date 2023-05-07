@@ -8,13 +8,9 @@
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <!-- <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>0 -->
             </form>
             <!-- Title -->
-            <h3 class="me-auto text-white">Air Condition & Refrigeration Services</h3>
+            <h3 class="me-auto text-white">Air Condition and Refrigeration Services</h3>
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
@@ -33,7 +29,7 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <a class="nav-link" href="index.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-gauge"></i></div>
                                 Dashboard
                             </a>
                             <a class="nav-link" href="inventory-page.php">
@@ -53,7 +49,7 @@
                                 Brand
                             </a>
                             <a class="nav-link" href="supplier.php">
-                                <div class="sb-nav-link-icon"><i class="fas fa-truck"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-warehouse"></i></div>
                                 Supplier
                             </a>
                             <a class="nav-link" href="product.php">

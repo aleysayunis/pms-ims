@@ -91,7 +91,7 @@ class Inventory {
 			$customerRows[] = $customer['address'];			
 			$customerRows[] = $customer['mobile'];	
 			$customerRows[] = number_format($customer['balance'],2);	
-			$customerRows[] = '<button type="button" name="update" id="'.$customer["id"].'" class="btn btn-primary btn-sm rounded-0 update" title="update"><i class="fa fa-edit"></i></button><button type="button" name="delete" id="'.$customer["id"].'" class="btn btn-danger btn-sm rounded-0 delete" ><i class="fa fa-trash"></button>';
+			$customerRows[] = '<button type="button" name="update" id="'.$customer["id"].'" class="btn btn-primary btn-sm rounded-0 update"> Edit <i class="fa fa-edit"></i></button><button type="button" name="delete" id="'.$customer["id"].'" class="btn btn-danger btn-sm rounded-0 delete" > Delete <i class="fa fa-trash"></button>';
 			$customerRows[] = '';
 			$customerData[] = $customerRows;
 		}
@@ -156,7 +156,7 @@ class Inventory {
 			$categoryRows[] = $category['categoryid'];
 			$categoryRows[] = $category['name'];
 			$categoryRows[] = $status;			
-			$categoryRows[] = '<button type="button" name="update" id="'.$category["categoryid"].'" class="btn btn-primary btn-sm rounded-0 update" title="Update"><i class="fa fa-edit"></i></button><button type="button" name="delete" id="'.$category["categoryid"].'" class="btn btn-danger btn-sm rounded-0 delete"  title="Delete"><i class="fa fa-trash"></i></button>';
+			$categoryRows[] = '<button type="button" name="update" id="'.$category["categoryid"].'" class="btn btn-primary btn-sm rounded-0 update"> Edit <i class="fa fa-edit"></i></button><button type="button" name="delete" id="'.$category["categoryid"].'" class="btn btn-danger btn-sm rounded-0 delete"> Delete <i class="fa fa-trash"></i></button>';
 			$categoryData[] = $categoryRows;
 		}
 		$output = array(
@@ -230,7 +230,7 @@ class Inventory {
 			$brandRows[] = $brand['bname'];
 			$brandRows[] = $brand['name'];
 			$brandRows[] = $status;
-			$brandRows[] = '<button type="button" name="update" id="'.$brand["id"].'" class="btn btn-primary btn-sm rounded-0  update" title="Update"><i class="fa fa-edit"></i></button><button type="button" name="delete" id="'.$brand["id"].'" class="btn btn-danger btn-sm rounded-0  delete" data-status="'.$brand["status"].'" title="Delete"><i class="fa fa-trash"></i></button>';
+			$brandRows[] = '<button type="button" name="update" id="'.$brand["id"].'" class="btn btn-primary btn-sm rounded-0  update"> Edit <i class="fa fa-edit"></i></button><button type="button" name="delete" id="'.$brand["id"].'" class="btn btn-danger btn-sm rounded-0  delete" data-status="'.$brand["status"].'"> Delete <i class="fa fa-trash"></i></button>';
 			$brandData[] = $brandRows;
 		}
 		$output = array(
@@ -321,7 +321,7 @@ class Inventory {
 			$productRow[] = $product["quantity"];
 			$productRow[] = $product['supplier_name'];
 			$productRow[] = $status;
-			$productRow[] = '<div class="btn-group btn-group-sm"><button type="button" name="view" id="'.$product["pid"].'" class="btn btn-light bg-gradient border text-dark btn-sm rounded-0  view" title="View"><i class="fa fa-eye"></i></button><button type="button" name="update" id="'.$product["pid"].'" class="btn btn-primary btn-sm rounded-0  update" title="Update"><i class="fa fa-edit"></i></button><button type="button" name="delete" id="'.$product["pid"].'" class="btn btn-danger btn-sm rounded-0  delete" data-status="'.$product["status"].'" title="Delete"><i class="fa fa-trash"></i></button></div>';
+			$productRow[] = '<div class="btn-group btn-group-sm"><button type="button" name="view" id="'.$product["pid"].'" class="btn btn-light bg-gradient border text-dark btn-sm rounded-0  view"> View <i class="fa fa-eye"></i></button><button type="button" name="update" id="'.$product["pid"].'" class="btn btn-primary btn-sm rounded-0  update"> Edit <i class="fa fa-edit"></i></button><button type="button" name="delete" id="'.$product["pid"].'" class="btn btn-danger btn-sm rounded-0  delete" data-status="'.$product["status"].'"> Delete <i class="fa fa-trash"></i></button></div>';
 			$productData[] = $productRow;
 						
 		}
@@ -491,7 +491,7 @@ class Inventory {
 			$supplierRows[] = $supplier['mobile'];			
 			$supplierRows[] = $supplier['address'];	
 			$supplierRows[] = $status;			
-			$supplierRows[] = '<div class="btn-group btn-group-sm"><button type="button" name="update" id="'.$supplier["supplier_id"].'" class="btn btn-primary btn-sm rounded-0  update" title="Update"><i class="fa fa-edit"></i></button><button type="button" name="delete" id="'.$supplier["supplier_id"].'" class="btn btn-danger btn-sm rounded-0  delete"  title="Delete"><i class="fa fa-trash"></i></button></div>';
+			$supplierRows[] = '<div class="btn-group btn-group-sm"><button type="button" name="update" id="'.$supplier["supplier_id"].'" class="btn btn-primary btn-sm rounded-0  update"> Edit <i class="fa fa-edit"></i></button><button type="button" name="delete" id="'.$supplier["supplier_id"].'" class="btn btn-danger btn-sm rounded-0  delete"> Delete <i class="fa fa-trash"></i></button></div>';
 			$supplierData[] = $supplierRows;
 		}
 		$output = array(
@@ -560,7 +560,7 @@ class Inventory {
 			$productRow[] = $purchase['pname'];
 			$productRow[] = $purchase['quantity'];			
 			$productRow[] = $purchase['supplier_name'];			
-			$productRow[] = '<div class="btn-group btn-group-sm"><button type="button" name="update" id="'.$purchase["purchase_id"].'" class="btn btn-primary btn-sm rounded-0  update" title="Update"><i class="fa fa-edit"></i></button><button type="button" name="delete" id="'.$purchase["purchase_id"].'" class="btn btn-danger btn-sm rounded-0  delete" title="Delete"><i class="fa fa-trash"></i></button></div>';
+			$productRow[] = '<div class="btn-group btn-group-sm"><button type="button" name="update" id="'.$purchase["purchase_id"].'" class="btn btn-primary btn-sm rounded-0  update" > Edit <i class="fa fa-edit"></i></button><button type="button" name="delete" id="'.$purchase["purchase_id"].'" class="btn btn-danger btn-sm rounded-0  delete"> Delete <i class="fa fa-trash"></i></button></div>';
 			$purchaseData[] = $productRow;
 						
 		}
@@ -639,7 +639,7 @@ class Inventory {
 			$orderRow[] = $order['pname'];
 			$orderRow[] = $order['total_shipped'];	
 			$orderRow[] = $order['name'];			
-			$orderRow[] = '<div class="btn-group btn-group-sm"><button type="button" name="update" id="'.$order["order_id"].'" class="btn btn-primary btn-sm rounded-0  update" title="Update"><i class="fa fa-edit"></i></button><button type="button" name="delete" id="'.$order["order_id"].'" class="btn btn-danger btn-sm rounded-0  delete" title="Delete"><i class="fa fa-trash"></i></button></button';
+			$orderRow[] = '<div class="btn-group btn-group-sm"><button type="button" name="update" id="'.$order["order_id"].'" class="btn btn-primary btn-sm rounded-0  update" > Edit <i class="fa fa-edit"></i></button><button type="button" name="delete" id="'.$order["order_id"].'" class="btn btn-danger btn-sm rounded-0  delete" > Delete <i class="fa fa-trash"></i></button></button';
 			$orderData[] = $orderRow;
 						
 		}
@@ -729,8 +729,6 @@ class Inventory {
 			$inventoryRow = array();
 			$inventoryRow[] = $i++;
 			$inventoryRow[] = "<div class='lh-1'><div>{$inventory['pname']}</div><div class='fw-bolder text-muted'><small>{$inventory['model']}</small></div></div>";
-			// $inventoryRow[] = $inventory['pname'];
-			// $inventoryRow[] = $inventory['model'];
 			$inventoryRow[] = $inventory['product_quantity'];
 			$inventoryRow[] = $inventory['recieved_quantity'];	
 			$inventoryRow[] = $inventory['total_shipped'];

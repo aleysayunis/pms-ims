@@ -7,6 +7,7 @@ $inventory = new Inventory();
 $inventory->checkLogin();
 ?>
 
+<link href="css/design5.css" rel="stylesheet" />
 <script src="js/jquery.dataTables.min.js"></script>
 <script src="js/dataTables.bootstrap.min.js"></script>		
 <link rel="stylesheet" href="css/dataTables.bootstrap.min.css" />
@@ -22,7 +23,7 @@ $inventory->checkLogin();
 				<li class="breadcrumb-item active">Brand</li>
 			</ol>
 			<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" align="right">
-				<button type="button" name="add" id="addBrand" class="btn btn-primary bg-gradient btn-sm rounded-0"><i class="far fa-plus-square"></i> New Brand</button>
+				<button type="button" name="add" id="addBrand" class="btn btn-primary bg-success btn-sm rounded-0"><i class="far fa-plus-square"></i> New Brand</button>
 			</div>
 		</div>
 		<div class="card mb-4">
@@ -33,8 +34,8 @@ $inventory->checkLogin();
 							<thead>
 								<tr>
 									<th>ID</th>
-									<th>Category</th>
 									<th>Brand Name</th>
+									<th>Category</th>
 									<th>Status</th>
 									<th>Action</th>
 								</tr>
@@ -74,7 +75,7 @@ $inventory->checkLogin();
 				</div>
 				<div class="modal-footer">
 					<input type="submit" name="action" id="action" class="btn btn-primary btn-sm rounded-0" value="Add" form="brandForm"/>
-					<button type="button" class="btn btn-default btn-sm rounded-0" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-danger btn-sm rounded-0" data-bs-dismiss="modal">Close</button>
 				</div>
 			</div>
 	</div>

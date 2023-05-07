@@ -22,7 +22,7 @@ $inventory->checkLogin();
 				<li class="breadcrumb-item active">Supplier</li>
 			</ol>
 			<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6" align="right">
-				<button type="button" name="add" id="addSupplier" data-bs-toggle="modal" data-bs-target="#userModal" class="btn btn-primary btn-sm rounded-0"><i class="far fa-plus-square"></i> Add Supplier</button>
+				<button type="button" name="add" id="addSupplier" data-bs-toggle="modal" data-bs-target="#userModal" class="btn btn-primary bg-success btn-sm rounded-0"><i class="far fa-plus-square"></i> Add Supplier</button>
 			</div>
 		</div>
 		<div class="card mb-4">
@@ -77,7 +77,7 @@ $inventory->checkLogin();
 				</div>
 				<div class="modal-footer">
 					<input type="submit" name="action" id="action" class="btn btn-primary rounded-0 btn-sm" value="addSupplier" form="supplierForm"/>
-					<button type="button" class="btn btn-default border rounded-0 btn-sm" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-danger btn-sm rounded-0" data-bs-dismiss="modal">Close</button>
 				</div>
 			</div>
 	</div>
