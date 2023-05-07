@@ -33,15 +33,15 @@ CREATE TABLE `ims_brand` (
 --
 
 INSERT INTO `ims_brand` (`id`, `categoryid`, `bname`, `status`) VALUES
-(1, 2, 'Samsung', 'active'),
-(2, 2, 'LG', 'active'),
-(3, 2, 'Carrier', 'active'),
-(4, 1, 'Daikin', 'active'),
-(5, 1, 'Haier', 'active'),
-(6, 1, 'Panasonic', 'active'),
-(7, 3, 'Hisense', 'active'),
-(8, 3, 'Whrilpool', 'active'),
-(9, 3, 'Fujidenzo', 'active');
+(1, 3, 'Samsung', 'active'),
+(2, 3, 'LG', 'active'),
+(3, 3, 'Panasonic', 'active'),
+(4, 1, 'Carrier', 'active'),
+(5, 1, 'Daikin', 'active'),
+(6, 1, 'Hitachi', 'active'),
+(7, 2, 'Hisense', 'active'),
+(8, 2, 'Whirlpool', 'active'),
+(9, 2, 'Fujidenzo', 'active');
 
 -- --------------------------------------------------------
 
@@ -135,9 +135,9 @@ CREATE TABLE `ims_product` (
 --
 
 INSERT INTO `ims_product` (`pid`, `categoryid`, `brandid`, `pname`, `model`, `description`, `quantity`, `base_price`, `tax`, `minimum_order`, `supplier`, `status`, `date`) VALUES
-(1, 2, 1, 'Product 101', 'P-1001', 'usce auctor faucibus efficitur.', 10, 500.00, '12.00', 1.00, 1, 'active', '0000-00-00'),
+(1, 2, 7, 'Product 101', 'P-1001', 'usce auctor faucibus efficitur.', 10, 500.00, '12.00', 1.00, 1, 'active', '0000-00-00'),
 (2, 1, 4, 'Product 102', 'P-1002', 'Proin vehicula mi pulvinar ipsum ornare tincidunt.', 15, 7500.00, '12.00', 1.00, 2, 'active', '0000-00-00'),
-(3, 3, 7, 'Product 103', 'P-1003', 'Integer interdum, odio eget mattis venenatis', 20, 350.00, '12.00', 1.00, 3, 'active', '0000-00-00');
+(3, 3, 1, 'Product 103', 'P-1003', 'Integer interdum, odio eget mattis venenatis', 20, 350.00, '12.00', 1.00, 3, 'active', '0000-00-00');
 
 -- --------------------------------------------------------
 
