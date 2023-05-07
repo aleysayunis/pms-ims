@@ -52,10 +52,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-signature"></i></div>
                                 Brand
                             </a>
-                            <!-- <a class="nav-link" href="supplier.php">
+                            <a class="nav-link" href="supplier.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-truck"></i></div>
                                 Supplier
-                            </a> -->
+                            </a>
                             <a class="nav-link" href="product.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-bag-shopping"></i></div>
                                 Product
@@ -64,10 +64,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-credit-card"></i></div>
                                 Purchase
                             </a>
-                            <!-- <a class="nav-link" href="order.php">
+                            <a class="nav-link" href="order.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-cart-shopping"></i></div>
                                 Orders
-                            </a> -->
+                            </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
